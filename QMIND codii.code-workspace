@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "canprobee",
+			"path": "../../QFSAE/zenith/canprobee"
+		}
+	],
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Attach to Chrome",
+				"port": 9222,
+				"request": "attach",
+				"type": "chrome",
+				"webRoot": "${workspaceFolder}"
+			},
+			{
+				"name": "Attach to Chrome",
+				"port": 9222,
+				"request": "attach",
+				"type": "chrome",
+				"webRoot": "${workspaceFolder}"
+			}
+			
+
+
+		]
+	}
+}
