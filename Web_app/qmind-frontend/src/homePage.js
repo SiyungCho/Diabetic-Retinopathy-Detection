@@ -11,8 +11,6 @@ function HomePage() {
   const [isTextBoxVisible, setTextBoxVisible] = useState(true);
 
   const s3 = new AWS.S3({
-    accessKeyId: 'AKIAS2MZU3KWX52A6PXB',
-    secretAccessKey: 'YmZNKfM/qvpfgWu9ZymgadoCG19Dl+Ocgw+D1Hdp',
     region: 'us-east-2',
   });
   const s3BucketName = 'exampleretinalfundimages';
