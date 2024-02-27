@@ -1,0 +1,141 @@
+/* HomePage.css */
+
+.container {
+    position: relative;
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.header {
+    background-color: #282c34;
+    padding: 20px;
+    color: #E5E4E2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.logo {
+    font-size: 1em;
+    color: #E5E4E2;
+    text-decoration: none; 
+}
+
+.nav a,
+.nav a:visited { 
+    color: #E5E4E2;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.nav a:hover {
+    color: #cccccc; 
+}
+
+.nav a:active {
+    color: #aaaaaa; 
+}
+
+.main {
+    padding: 20px;
+    text-align: center;
+}
+
+.text-box {
+    background-color: #E5E4E2;
+    border-left: 5px solid #4CAF50; 
+    margin: 20px 10px;
+    padding: 20px 20px;
+    text-align: left;
+}
+  
+.text-box-visible {
+    opacity: 0.8; 
+    height: auto; 
+}
+
+.text-box-hide {
+    opacity: 0;
+    transform: translateY(-20px); 
+    display: none;
+}
+
+.toggle-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: #E5E4E2;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 10px;
+}
+
+.toggle-button:hover {
+    background-color: #367c39; 
+}
+
+.upload-button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    border: none;
+    color: #E5E4E2;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #367c39;
+}
+
+.dropdown {
+    border: none; /* Removes the border */
+    outline: none; /* Removes the focus outline */
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.randomdownload{
+    background-color: #808080; 
+    border: none;
+    color: #E5E4E2;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 10px;
+}
+
+.randomdownload:hover {
+    background-color: #373636; 
+}

@@ -1,0 +1,156 @@
+  .faq-page{
+    padding-bottom:20px;
+  }
+
+  .static-content{
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:20px;
+  }
+
+  .static-content .subsection {
+    border-radius: 8px;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .model_images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .model_text{
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+
+  .model_info{
+    display: flex;
+  }
+
+  .model_image {
+    width: 28vw;
+    height: auto;
+  }
+  
+  .subsection:nth-child(2) { background-color: #e6e8eb;}
+  .subsection:nth-child(3) { background-color: #dcdfe3;}
+  
+  /* Meet the Team Section Styles */
+  .meet-the-team {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #dcdfe3;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  
+  .meet-the-team h2 {
+    margin-bottom: 20px;
+    background-color: #a3a6ad;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .team-bubbles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 10px;
+  }
+  
+  .bubble:hover {
+    transform: scale(1.1);
+  }
+  
+  .bubble-image {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .bubble-image img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+  }
+  
+  .bubble-text {
+    font-size: 16px; 
+    color: #333;
+  }
+  
+  .toggle-button-faq {
+    border: none;
+    color: #f1f0ee;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    height: 40px;
+    width: 140px
+}
+
+.text-box-faq {
+  background-color: #E5E4E2;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px 20px;
+  text-align: left;
+}
+
+.text-box-visible-faq {
+  opacity: 0.8; 
+  height: auto; 
+}
+
+.text-box-hide-faq {
+  opacity: 0;
+  transform: translateY(-20px); 
+  display: none;
+}
+
+.button-color1 {
+  background-color: #A462C7;
+}
+
+.button-color1:hover {
+  background-color: #7a3b9c; 
+}
+
+.button-color2 {
+  background-color: #4266E8;
+}
+
+.button-color2:hover {
+  background-color: #193084; 
+}
+
+.button-color3 {
+  background-color: #FCA311;
+}
+
+.button-color3:hover {
+  background-color: #b5750e; 
+}

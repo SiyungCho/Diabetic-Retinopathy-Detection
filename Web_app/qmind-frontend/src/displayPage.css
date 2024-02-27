@@ -1,0 +1,113 @@
+.display-container {
+    background-color: #ffffff;
+    height: 100vh;
+    padding-bottom: 20vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .prediction-result {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .image-container, .graph-container, .table-container {
+    padding: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    /* Adjust to ensure the images fit well in their containers */
+  }
+
+  .graph {
+    width: 100%;
+    height: auto;
+    /* Adjust to ensure the graphs fit well in their containers */
+  }
+
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .custom-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 600px) {
+    .image-container, .graph-container, .table-container {
+      padding: 5px;
+    }
+  
+    .image, .graph {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .custom-table {
+      width: 100%;
+      margin-top: 5px;
+    }
+  
+    .custom-table th, .custom-table td {
+      padding: 4px;
+    }
+  }
+
+  .flip-card {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid green;
+  }
+  
+  .flip-card-inner {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border: 1px solid yellow;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid red;
+    backface-visibility: hidden; /* Hide the back of the card when not facing the user */
+  }
+  
+  .flip-card-front {
+    z-index: 1; /* Ensures the front is above the back initially */
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg); /* Flip the back so it faces out when rotated */
+    z-index: 2; /* Lower z-index since it starts out hidden */
+  }
+  
+  .flip-card-inner.is-flipped {
+    max-width: 100%;
+    height: auto;
+    transform: rotateY(180deg); /* Flip the card to show the back */
+  }

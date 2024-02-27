@@ -1,3 +1,10 @@
 sampled_images/
 sampled_dataset.csv
 sampled_images
+sampled_images/
+sampled_dataset.csv
+sampled_images
+qmind-2024/
+__pycache__/
+*.keras
+node_modules/
