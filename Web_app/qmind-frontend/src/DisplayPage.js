@@ -34,12 +34,12 @@ function DisplayPage() {
   const location = useLocation();
   const { accuracy, metrics, prediction, graphs } = location.state;
 
-  const renderGraph = (value, index) => (
-    <img src={`data:image/png;base64,${value}`} alt={`Graph ${index+1}`} className="graph"/>
+  const renderGraph = (value, index, specclass) => (
+    <img src={`data:image/png;base64,${value}`} alt={`Graph ${index+1}`} className={`${specclass}`}/>
   );
 
   const renderBackContent = (content) => (
-    <Typography variant="body1" color="common.white">
+    <Typography variant="body1" color="common.black">
       {content}
     </Typography>
   );
@@ -53,8 +53,8 @@ function DisplayPage() {
         </nav>
       </header>
 
-      <Container maxWidth="lg" style={{ marginTop: '10px' }}>
-        <Grid container spacing={3}>
+      <Container maxWidth="lg" style={{ marginTop: '10px', backgroundColor:'' }}>
+        <Grid container spacing={3} style={{backgroundColor:'' }}>
 
           <Grid item xs={12}>
             <Paper elevation={3} className="prediction-result">
@@ -65,33 +65,7 @@ function DisplayPage() {
             </Paper>
           </Grid>
 
-          <Grid item xs={6} md={3}>
-                <FlipCard 
-                  front={renderGraph(graphs[0], 0)} 
-                  back={renderBackContent(`Details about Graph ${0 + 1}`)} 
-                  containerclass="image-container"
-                />
-          </Grid>
-
-          <Grid item xs={6} md={6}>
-            <Paper elevation={3} className="graph-container">
-              <img src={`data:image/png;base64,${graphs[1]}`} alt="Graph 2" className="graph" />
-            </Paper>
-          </Grid>
-
-          <Grid item xs={6} md={3}>
-            <Paper elevation={3} className="image-container">
-              <img src={`data:image/png;base64,${graphs[4]}`} alt="Graph 3" className="image" style={{height: 'fit-content'}}/>
-            </Paper>
-          </Grid>
-
-          <Grid item xs={6} md={4}>
-            <Paper elevation={3} className="image-container">
-              <img src={`data:image/png;base64,${graphs[2]}`} alt="Graph 4" className="image" />
-            </Paper>
-          </Grid>
-          
-          <Grid item xs={6} md={4}>
+          <Grid item xs={7} md={4} style={{height: '350px'}}>
             <Paper elevation={3} className="table-container">
               <table className="custom-table">
                 <thead>
@@ -129,13 +103,47 @@ function DisplayPage() {
                   </tr>
                 </tbody>
               </table>
-            </Paper>  
+            </Paper> 
+          </Grid>
+
+          <Grid item xs={5} md={5}>
+            <FlipCard 
+                  front={renderGraph(graphs[1], 1, 'graph')} 
+                  back={renderBackContent(`Details about Graph ${1 + 1}`)} 
+                  containerclass="graph-container"
+            />
+          </Grid>
+
+          <Grid item xs={6} md={3}>
+            <FlipCard 
+                  front={renderGraph(graphs[4], 4, 'image')} 
+                  back={renderBackContent(`Details about Graph ${4 + 1}`)} 
+                  containerclass="image-container"
+            />
+          </Grid>
+
+          <Grid item xs={6} md={4} style={{height: '300px' }}>
+            <FlipCard 
+                  front={renderGraph(graphs[2], 2, 'image')} 
+                  back={renderBackContent(`Details about Graph ${2 + 1}`)} 
+                  containerclass="image-container"
+            />
+          </Grid>
+          
+          <Grid item xs={6} md={4}>
+            <FlipCard 
+                  front={renderGraph(graphs[0], 0, 'image')} 
+                  back={renderBackContent(`Enhanced Image Version of inputted image.`)} 
+                  containerclass="image-container"
+                />
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <Paper elevation={3} className="graph-container">
-              <img src={`data:image/png;base64,${graphs[3]}`} alt="Graph 5" className="graph" />
-            </Paper>
+            <FlipCard 
+                  front={renderGraph(graphs[3], 3, 'graph')} 
+                  back={renderBackContent(`Details about Graph ${3 + 1}`)} 
+                  containerclass="graph-container"
+            />
           </Grid>
 
         </Grid>

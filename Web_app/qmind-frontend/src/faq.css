@@ -154,3 +154,30 @@
 .button-color3:hover {
   background-color: #b5750e; 
 }
+
+.Terms-of-Use {
+  margin-top: 50px;
+  text-align: left;
+  background-color: #dcdfe3;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-bottom: 10px;
+}
+
+.Terms-of-Use h2{
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #a3a6ad;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Terms-of-Use p{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.terms-list{
+  padding-left: 60px;
+  padding-right: 20px;
+}

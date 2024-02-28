@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import AWS from 'aws-sdk';
+import custom_plot from './architecture_images/custom_graph.png'
 
 
 function HomePage() {
@@ -11,6 +12,8 @@ function HomePage() {
   const [isTextBoxVisible, setTextBoxVisible] = useState(true);
 
   const s3 = new AWS.S3({
+    accessKeyId: 'AKIAS2MZU3KWX52A6PXB',
+    secretAccessKey: 'YmZNKfM/qvpfgWu9ZymgadoCG19Dl+Ocgw+D1Hdp',
     region: 'us-east-2',
   });
   const s3BucketName = 'exampleretinalfundimages';
@@ -102,10 +105,12 @@ function HomePage() {
         </div>
         {isTextBoxVisible && (
           <div className={`text-box ${isTextBoxVisible ? 'text-box-visible' : ''}`}>
-            <p>Over 3 million Canadians have been diagnosed with diabetes, and this number is steadily increasing, with an estimated average annual increase of 3.3%. Furthermore, the annual cost of diabetes treatment in the United States exceeds $15,000, which is 2.3 times higher than what an average US citizen spends on medical treatments. Therefore, early diagnosis and treatment of diabetes are essential not only for mitigating health risks but also for alleviating the financial burden by decreasing the likelihood of severe and costly treatments.</p>
-            <p>Diabetes is a chronic condition characterized by high blood sugar levels, which can range from mild to severe symptoms. If left undiagnosed or uncontrolled, it can lead to permanent severe health conditions and, in some cases, death. Early identification allows doctors to initiate medical treatments, educate patients about lifestyle modifications, and introduce dietary changes, medication, and exercise regimens. Early intervention can not only reduce blood sugar levels but also enable patients to maintain these levels from an early stage, minimizing the risk of kidney damage, vision loss, nerve damage, and cardiovascular diseases.</p>
-            <p>This website was developed to assist patients and medical practitioners in diagnosing early-onset diabetic retinopathy using deep learning methods. Retinal fundus images were obtained and utilized by a group of researchers at Queen’s University to make accurate predictions for diabetic retinopathy. The researchers compared the use of custom deep learning prediction models with pretrained models developed by other researchers to predict proliferative (severe) and non-proliferative (early-stage) diabetic retinopathy. Each model developed and tested has demonstrated its benefits and potential use cases. Users are advised to read the FAQ page to learn more about the pros and cons of each model type.</p>
-            <p><b>Disclaimer:</b> The use of this website complies with all governing bodies; however, it should only be used as an aid, not a definitive cause. Images uploaded are not saved and will not be collected.</p>
+            <p>Diabetes is a systemic condition characterized by elevated blood sugar levels affecting more than 537 million adults globally. With predictions of rising to more than 783 million adults by 2045, responsible for 6.7 million deaths in 2021, and costing healthcare expenditures of almost 966 billion USD in the last 15 years, timely interventions are needed to control its associated symptoms. </p>
+            <p>Without timely intervention, diabetes can cause irreversible health issues and potentially lead to death. Early diagnosis and treatment of diabetes are crucial for reducing health risks and financial burdens by preventing severe and costly treatments, enabling treatment starts and patient education on lifestyle adjustments. Such proactive measures can lower and stabilize blood sugar levels, significantly decreasing the chances of kidney damage, vision loss, nerve damage, and cardiovascular diseases.</p>
+            <p>One such symptom associated with diabetes is diabetic retinopathy(DR), a condition affecting more than one-third of adults above 40 years of age with diabetes. This progressive condition, affecting the eye’s ability to retain visual capacity, can manifest through weakening of capillary walls, the escape of blood through blood vessels, and even detachment of the retina: which may lead to permanent blindness. DR is categorized as either non-proliferative(early-stage) or proliferative(late stage), as discerned below: </p>
+            <img src={custom_plot} alt="DR Stages" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', height:'250px' }} className="image"/>
+            <p>This website was developed to assist patients and medical practitioners in diagnosing early-onset dry using deep learning methods. Retinal fundus images were obtained and utilized by a group of researchers at Queen’s University to make accurate predictions for diabetic retinopathy. The researchers compared the use of custom deep learning prediction models with pretrained models developed by other researchers to predict proliferative (severe) and non-proliferative (early-stage) DR. Each model developed and tested has demonstrated its benefits and potential use cases. Users are advised to read the FAQ page to learn more about the pros and cons of each model type. </p>
+            <p><b>Disclaimer:</b> The use of this website complies with all governing bodies; however, it should not be used as a substitute for professional medical advice, diagnosis, or treatment. We are not liable for any warranty or liability for your use of this information. Images uploaded are not saved and will not be collected. Your use of this information means you agree to our <Link to="/faq"><b>Terms of Use.</b></Link></p>
           </div>
         )}
 
