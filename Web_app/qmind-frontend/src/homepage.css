@@ -3,7 +3,7 @@
 .container {
     position: relative;
     background-color: #ffffff;
-    height: 100vh;
+    height: 120vh;
 }
 
 .header {
@@ -38,33 +38,42 @@
 }
 
 .main {
+    display: flex;
+    align-items: center; /* This will vertically align the flex items if they are not the same height */
+    justify-content: space-between; /* This will align the toggle button to the left and the upload button section to the center */
     padding: 20px;
-    text-align: center;
 }
 
 .text-box {
     background-color: #E5E4E2;
-    border-left: 5px solid #4CAF50; 
+    border-left: 5px solid #0086E7;
     margin: 20px 10px;
-    padding: 20px 20px;
     text-align: left;
+    margin-bottom: 40px;
 }
-  
+
+.text-box p {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
 .text-box-visible {
-    opacity: 0.8; 
-    height: auto; 
+    opacity: 1;
+    height: auto;
 }
 
 .text-box-hide {
     opacity: 0;
-    transform: translateY(-20px); 
+    transform: translateY(-20px);
     display: none;
 }
-
 .toggle-button {
-    background-color: #4CAF50; 
+    background-color: #0086E7; 
     border: none;
     color: #E5E4E2;
+    width: 80px;
     padding: 10px 15px;
     cursor: pointer;
     outline: none;
@@ -72,29 +81,35 @@
     margin: 10px;
     transition: background-color 0.3s ease;
     margin-top: 20px; 
-    margin-bottom: 20px; 
+    margin-bottom: 5px; 
     border-radius: 10px;
+    text-align: center;
+    margin-right: auto; /* This will push everything else to the opposite side */
+}
+
+.toggle-container{
+    text-align: left;
 }
 
 .toggle-button:hover {
-    background-color: #367c39; 
+    background-color: #034b7f; 
 }
 
 .upload-button {
-    background-color: #4CAF50;
+    background-color: #0086E7;
     border: none;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 0 auto; /* This will center the upload button section in the available space */
     cursor: pointer;
     border-radius: 5px;
 }
 
 .submit-button {
-    background-color: #4CAF50;
+    background-color: #0086E7;
     border: none;
     color: #E5E4E2;
     padding: 10px 20px;
@@ -108,7 +123,7 @@
 }
 
 .submit-button:hover {
-    background-color: #367c39;
+    background-color: #034b7f;
 }
 
 .dropdown {
@@ -116,10 +131,22 @@
     outline: none; /* Removes the focus outline */
 }
 
-.button-container{
+.button-container {
     display: flex;
-    justify-content: space-between;
-}
+    justify-content: space-between; /* This will push the h1 and button to the extreme sides */
+    position: relative; /* Establish a positioning context for absolute positioning */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .button-container h1 {
+    position: absolute; /* Position the h1 absolutely to ignore flex positioning */
+    left: 50%; /* Start from the middle of the parent */
+    transform: translateX(-50%); /* Offset the h1 by half its width to center it */
+  }
+  
+  .button-container .randomdownload {
+    margin-left: auto; /* Push the button to the right */
+  }
 
 .randomdownload{
     background-color: #808080; 
